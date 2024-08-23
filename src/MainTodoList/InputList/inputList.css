@@ -1,0 +1,84 @@
+.InputLists{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+/* Styles for Left side bar of The Input Lists */
+
+.InputLists .left{
+	width: 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	border-right: 5px solid rgb(233, 91, 3);
+	gap: 5px;
+}
+
+.InputLists .left button:first-child{
+	margin-top: 10px;
+}
+.InputLists .left button{
+	color: rgb(177, 58, 18);
+	font-size: 30px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 600;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	height: 120px;
+	transition: all .25s ease-out;
+}
+.InputLists .left button:hover{
+	background-color: #f0d019c5;
+}
+.InputLists .left #onFocus{
+	background-color: #cca310c5;
+	color: rgb(28, 113, 17);
+	font-size: 40px;
+	box-shadow: -7px 5px 5px 5px #bba734f8;
+	
+}
+
+
+/* Styles for RIGHT SIDE of Input Lists */
+
+.InputLists .right{
+	width: 80%;
+	height: 510px;
+	position: relative; 
+}
+
+.InputLists .right .WrapElements {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
+
+}
+.InputLists .right .WrapElements{
+	display: flex;
+	justify-content: center;
+}
+.InputLists .right .WrapElements .wrapInputTag {
+	display: flex;
+}
+.wrapInputTag input{
+	width: 600px;
+	padding: 5px;
+	font-size: x-large;
+	font-weight: 300;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	border: 5px solid #000000f6;
+	border-radius: 14px 0px 0px 14px;
+	text-align: left;
+}
+.wrapInputTag #SubmitBtn {
+	font-weight: 300;
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	width: fit-content;
+	font-size: 20px;
+	padding: 0px 10px;
+	background-color: chocolate;
+	border-radius: 0px 5px 5px 0px;
+}
