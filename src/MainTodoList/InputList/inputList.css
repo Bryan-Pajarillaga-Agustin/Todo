@@ -1,5 +1,5 @@
 .InputLists{
-	width: 100%;
+	width: 100vw;
 	height: 100%;
 	display: flex;
 }
@@ -7,20 +7,16 @@
 /* Styles for Left side bar of The Input Lists */
 
 .InputLists .left{
-	width: 20%;
-	height: 100%;
+	width: 300px;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	border-right: 5px solid rgb(233, 91, 3);
-	gap: 5px;
+	background-color: #febd54;
 }
 
-.InputLists .left button:first-child{
-	margin-top: 10px;
-}
 .InputLists .left button{
-	color: rgb(177, 58, 18);
-	font-size: 30px;
+	color: #b13a12;
+	font-size: 20px;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	font-weight: 600;
 	border: none;
@@ -33,10 +29,10 @@
 	background-color: #f0d019c5;
 }
 .InputLists .left #onFocus{
-	background-color: #cca310c5;
+	background-color: #b9971dfc;
 	color: rgb(28, 113, 17);
-	font-size: 40px;
-	box-shadow: -7px 5px 5px 5px #bba734f8;
+	font-size: 30px;
+	box-shadow: -7px 5px 25px 2px #bba734f8;
 	
 }
 
@@ -44,17 +40,45 @@
 /* Styles for RIGHT SIDE of Input Lists */
 
 .InputLists .right{
-	width: 80%;
-	height: 510px;
-	position: relative; 
+	width: 100%;
+	height: 100vh;
 }
 
-.InputLists .right .WrapElements {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 20px;
+/* Displayed Input Styles */
 
+.DisplayTasks {
+	width: 100%;
+	height: 80%;
+	overflow: hidden;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+.DisplayFew {
+	width: 100%;
+	height: 60%;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.DisplayFew label, .DisplayTasks label{
+	padding: 10px 20px;
+	border: 5px solid #ff8400;
+	margin: 10px 20px;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+
+/* Input Tags Styles */
+
+.InputLists .right .WrapElements {
+	display: flex;
+	flex-direction: column;
+	background-color: #f69036;
 }
 .InputLists .right .WrapElements{
 	display: flex;
@@ -62,6 +86,7 @@
 }
 .InputLists .right .WrapElements .wrapInputTag {
 	display: flex;
+	justify-content: center;
 }
 .wrapInputTag input{
 	width: 600px;
@@ -72,13 +97,49 @@
 	border: 5px solid #000000f6;
 	border-radius: 14px 0px 0px 14px;
 	text-align: left;
+	margin: 20px 0px 20px 20px;
 }
 .wrapInputTag #SubmitBtn {
 	font-weight: 300;
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	width: fit-content;
 	font-size: 20px;
+	margin: 20px 20px 20px 0px;
 	padding: 0px 10px;
 	background-color: chocolate;
 	border-radius: 0px 5px 5px 0px;
+}
+
+.DisplayNone{
+	display: none;
+}
+
+.SelectTasksPopUp{
+	margin: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.SelectTasksPopUp .MarkAsFinished, 
+.SelectTasksPopUp .Delete {
+	
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-weight: 900;
+	font-size: 20px;
+	border: 0px;
+	border-radius: 10px;
+	padding: 10px 20px;
+	background-color: #c5cf04;
+	color: #eb0c17;
+	cursor: pointer;
+	transition: all .3s ease-in;
+}
+.SelectTasksPopUp .Delete{
+	margin-left: auto;
+}
+.SelectTasksPopUp button:hover{
+	color: white;
+	background-color: red;
+}
+.SelectTasksPopUp button:active{
+	opacity: .7;
 }
