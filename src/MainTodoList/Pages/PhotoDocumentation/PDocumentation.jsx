@@ -206,7 +206,7 @@ export default function PDocumentation({ pagination, userRootName, data, setData
 				<p id="horizontalLine"></p>
 
 				<div className="FolderContainer">
-					{dataLocal[0].folder != "null" ? dataLocal.map((item, i)=>(
+					{dataLocal ? dataLocal.map((item, i)=>(
 					<Folders
 						key={i}
 						i={i}
