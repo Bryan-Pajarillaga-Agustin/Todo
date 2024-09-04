@@ -94,7 +94,7 @@ export default function PDocumentation({ pagination, userRootName, data, setData
 	function storeToDB(url){
 		console.log(indexFolder)
 		var RootFolder = JSON.parse(localStorage.getItem("RootFolder"))
-		var data = JSON.parse(localStorage.getItem("data"))
+		var data = JSON.parse(localStorage.getItem("dataFolder"))
 		if(data[indexFolder].folder[0] == "null"){
 			data[indexFolder].folder.pop()
 			data[indexFolder].folder.unshift(url)
@@ -104,13 +104,13 @@ export default function PDocumentation({ pagination, userRootName, data, setData
 		
 		setEmptyFolder(true)
 		setDataLocal(data)
-		localStorage.setItem("data", JSON.stringify(data)) //Saves the data to the local Storage
+		localStorage.setItem("dataFolder", JSON.stringify(data)) //Saves the data to the local Storage
 		// database.ref(RootFolder.UserRootName + "/").set(array) // Saving the data to the firabase database
 	}
 
 	function newFolder(){
 		if(folderRootName != null){
-			let data = JSON.parse(localStorage.getItem("data"))
+			let data = JSON.parse(localStorage.getItem("dataFolder"))
 		let updateData = []
 		let object
 		let inputFolderName = window.prompt("Name Your Folder: ")
@@ -141,14 +141,14 @@ export default function PDocumentation({ pagination, userRootName, data, setData
 				data.unshift(object)
 				setData([...data])
 				setDataLocal([...data])
-				localStorage.setItem("data", JSON.stringify(data))
+				localStorage.setItem("dataFolder", JSON.stringify(data))
 			} else {
 				data = []
 				data.unshift(object)
 				updateData = data
 				setData([...updateData])
 				setDataLocal([...updateData])
-				localStorage.setItem("data", JSON.stringify(updateData))
+				localStorage.setItem("dataFolder", JSON.stringify(updateData))
 			}
 		}
 		
@@ -160,7 +160,7 @@ export default function PDocumentation({ pagination, userRootName, data, setData
 		// 	const data = snapshot.val()
 		// 	setData(data)
 		// })
-		let data = JSON.parse(localStorage.getItem("data"))
+		let data = JSON.parse(localStorage.getItem("dataFolder"))
 		let RootFolder = JSON.parse(localStorage.getItem("RootFolder"))
 		if(data){
 			setDataLocal(data)

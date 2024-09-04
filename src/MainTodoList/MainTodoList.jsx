@@ -18,7 +18,7 @@ export default function MainTodoList(){
 
 
 	const update = useEffect(()=>{
-		const dataLocal = JSON.parse(localStorage.getItem("data"))
+		const dataLocal = JSON.parse(localStorage.getItem("dataFolder"))
 		const rootFolder = JSON.parse(localStorage.getItem("RootFolder"))
 		if(dataLocal != null && rootFolder != null) {
 			setRootFolder(rootFolder)
