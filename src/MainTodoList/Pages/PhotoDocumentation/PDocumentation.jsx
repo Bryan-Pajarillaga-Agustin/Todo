@@ -162,8 +162,13 @@ export default function PDocumentation({ pagination, userRootName, data, setData
 		// })
 		let data = JSON.parse(localStorage.getItem("data"))
 		let RootFolder = JSON.parse(localStorage.getItem("RootFolder"))
-		setDataLocal(data)
-		setFolderRootName(RootFolder.UserRootName)
+		if(data){
+			setDataLocal(data)
+		}
+		if(RootFolder != null){
+			setFolderRootName(RootFolder.UserRootName)
+		}
+		
 	}, [data])
 	
 	useEffect(()=>{
@@ -201,7 +206,7 @@ export default function PDocumentation({ pagination, userRootName, data, setData
 				<p id="horizontalLine"></p>
 
 				<div className="FolderContainer">
-					{dataLocal != null ? dataLocal.map((item, i)=>(
+					{dataLocal[0].folder != "null" ? dataLocal.map((item, i)=>(
 					<Folders
 						key={i}
 						i={i}
