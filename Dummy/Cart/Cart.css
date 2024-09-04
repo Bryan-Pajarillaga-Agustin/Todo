@@ -1,0 +1,263 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.transparent{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.Cart-Wrapper, .notOnCart{
+	display: flex;
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 20px;
+	border: 5px #f3af39f9;
+	border-style: groove;
+	width: 500px;
+	height: 500px;
+	background-color: #64a490fd;
+}	
+.Cart-Wrapper{
+	box-shadow: 0px 0px 5px 100% #ffffff8f;
+	filter: drop-shadow(0px 0px 5px black);
+	animation: slideCart .2s linear;
+}
+.notOnCart{
+	display: none;
+	opacity: 0;
+	animation: fadeCart .3s linear;
+}
+.notonCart{
+	display: none;
+	opacity: 0;
+	animation: fadeCart .3s linear;
+}
+@keyframes fadeCart{
+	0%{
+		display: flex;
+		opacity: 1;
+	}
+	99%{
+		opacity: 0;
+		transform: translateX(-45%);
+	}
+	100%{
+		display: none;
+	}
+}
+@keyframes slideCart{
+	0%{
+		display: flex;
+		opacity: 0;
+		transform: translateX(-45%);
+	}
+	99%{
+		opacity: 1;
+		
+		transform: translateX(-50%);
+	}
+}
+.Cart-Wrapper #image{
+	position: absolute;
+	left: 70px;
+	top: -30px;
+	width: 100px;
+	height: 100px;
+	transform: rotateZ(-20deg);
+	background-image: url('Images/cart.png');
+}
+.Cart-Wrapper #Cart-Logo{
+	font-size: 90px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-style: oblique;
+	color: #ec3a08;
+	position: absolute;
+	top: -40px;
+	left: 54%;
+	transform: translateX(-50%);
+}
+.Cart-Wrapper .Cart_Container{
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 340px;
+	width: fit-content;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #e87816;
+}
+.Cart-Wrapper .item-content{
+	width: 100%;
+}
+.Cart-Wrapper .Cart_Container .EachCartItems{
+	margin: 5px;
+	border: 2px solid #ec3a08 ;
+	background-color: #e8b416;
+	width: 400px;
+	height: 150px;
+	display: flex;
+}
+.wrap-elements{
+	display: flex;
+	width: 100%;
+	margin: 5px 0px;
+}
+.wrap-elements h2{
+	margin-right: auto;
+	font-size: 30px;
+	font-weight: 1000;
+	width: fit-content;
+	margin-left: 5px;
+}
+.wrap-elements button{
+	width: fit-content;
+	height: fit-content;
+	padding: 5px 10px;
+	border: 0px;
+	border-radius: 10px;
+	background-color: red;
+	color: white;
+	margin-right: 5px;
+}
+#NoItems{
+	display: block;
+	font-size: 40px;
+	color: #ec3a08;
+	margin: 90px 10px;
+	width: 100%;
+	height: 100%;
+}
+#No-NoItems{
+	display: none;
+}
+.wrap_elements{
+	width: 100%;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #ffb700;
+}
+.wrap_elements #remove_items{
+	width: fit-content;
+	height: fit-content;
+	padding: 10px 20px;
+	margin-right: 20px;
+	margin-left: auto;
+	background-color: #4f64dad7;
+	cursor: pointer;
+	border-radius: 10px;
+	border: 0px;
+}
+
+.No-NoItems{
+	display: none;
+}
+.wrap_elements h1{
+	margin-right: auto;
+	margin-left: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 30px;
+}
+#price{
+	margin: 10px;
+}
+
+
+@media (max-width: 500px){
+	.Cart_Container{
+		width: 80px;
+		height: 80px;
+		overflow: hidden;
+	}
+	.Cart-Wrapper, .notOnCart{
+		top: 70px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 20px;
+		border: 5px #f3af39f9;
+		border-style: groove;
+		width: 300px;
+		height: 300px;
+	}	
+	.Cart-Wrapper #image{
+		position: absolute;
+		left: 50px;
+		top: -20px;
+		width: 60px;
+		height: 60px;
+	}
+	.Cart-Wrapper #Cart-Logo{
+		font-size: 60px;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		font-style: oblique;
+		color: #ec3a08;
+		position: absolute;
+		top: -20px;
+		left: 58%;
+		transform: translateX(-50%);
+	}
+	.Cart-Wrapper .Cart_Container{
+		width: 280px;
+		height: 180px;
+		background-color: transparent;
+	}
+	.Cart-Wrapper .item-content{
+		width: 100%;
+	}
+	.Cart-Wrapper .Cart_Container .EachCartItems{
+		margin: 5px;
+		border: 2px solid #ec3a08 ;
+		background-color: #e8b416;
+		width: 95%;
+		height: 80px;
+	}
+	.EachCartItems img{
+		width: 80px;
+		height: 80px;
+	}
+
+	.wrap-elements h2{
+		margin-right: auto;
+		font-size: 30px;
+		font-weight: 1000;
+		width: fit-content;
+		margin-left: 5px;
+	}
+	.wrap-elements button{
+		width: fit-content;
+		height: fit-content;
+		padding: 5px 10px;
+		font-size: 15px;
+		margin-right: 10px;
+	}
+
+	.wrap-elements button{
+		width: fit-content;
+		height: fit-content;
+		padding: 5px 10px;
+		font-size: 15px;
+		margin-right: 10px;
+	}
+	.Cart-Wrapper #NoItems{
+		font-size: 20px;
+		margin-top: 50px;
+	}
+
+	.wrap_elements{
+		height: 40px;
+		top: 60px;
+	}
+	.wrap_elements h1{
+		font-size: 20px;
+	}
+
+}

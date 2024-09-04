@@ -2,17 +2,18 @@ import "./Tasks.css"
 
 import { useEffect, useState } from "react"
 
-export default function Tasks({taskLists, state, current, setSelected, selected, isChecked}){
+export default function Tasks({taskLists, state, current, setSelected, isChecked}){
 	const [TaskLists, setTaskLists] = useState()
 	const [currentAdded, setCurrentAdded] = useState()
 
 	function removeFromList(index){
 		var taskList = JSON.parse(localStorage.getItem("TodoList"))
 		taskList.splice(index, 1)
-		setTaskLists([...taskList])
 		localStorage.setItem("TodoList", JSON.stringify(taskList))
+		setTaskLists([...taskList])
 	}
 
+	
 	
 	function isChecked(i){
 		var data = JSON.parse(localStorage.getItem("TodoList"))

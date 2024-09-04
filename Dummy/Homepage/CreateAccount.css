@@ -1,0 +1,288 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+button{
+	cursor: pointer;
+	transition: all.2s;
+}
+button:hover{
+	opacity: .6;
+}
+button:active{
+	opacity: .8;
+}
+.not{
+	animation: fade 1s linear;
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.back-create{
+	display: none;
+}
+@keyframes fade{
+	0%{
+		display: flex;
+		opacity: 1;
+	}
+	100%{
+		
+		opacity: 0;
+		display: none;
+	}
+}
+.Sign-Log{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: 900;
+	font-size: 50px;
+	width: fit-content;
+	font-style: oblique;
+}
+.LoginBox{
+	display: block;
+	border-radius: 30px;
+	background: linear-gradient(215deg, #09e8a1, #6aff00);
+	position: absolute;
+	top: 90px;
+	left: 50%;
+	transform: translateX(-50%);
+	flex-direction: column;
+	width: 400px;
+	height: 400px;
+	align-items:center;
+	justify-content: center;
+}
+.LoginBox .back{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.LoginBox .inputLogin {
+	border: 0px;
+	border-bottom: 5px solid black;
+	background: transparent;
+	width: 300px;
+	height: fit-content;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 20px;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+.LoginBox .inputLogin:focus {
+	outline: none;
+}
+.LoginBox .CPass{
+	width: 300px;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	margin-top: 10px;
+	margin-bottom: 30px;
+
+}
+.LoginBox .CPass #SeePassword{
+	width: 20px;
+	height: 20px;
+}
+.LoginBox #LoginButton {
+	border: 0px;
+	border-radius: 20px;
+	background-color: #3f3c36d5;
+	font-weight: 700;
+}
+.LoginBox .OptionSignUp{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 500;
+	color: #111111e1;
+}
+.LoginBox .OptionSignUp #Create{
+	cursor: pointer;
+}
+.LoginBox .OptionSignUp #Create:active{
+	color: blue;
+}
+
+/* SignUp Box Styles */
+
+.SigninBox .SignInForm{
+	display: flex;
+	border-radius: 30px;
+	background: linear-gradient(215deg, #09e8a1, #6aff00);
+	position: absolute;
+	top: 90px;
+	left: 50%;
+	transform: translateX(-50%);
+	flex-direction: column;
+	width: 400px;
+	height: 400px;
+	align-items:center;
+	justify-content: center;
+}
+.SignInForm .back{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.SigninBox .inputSign{
+	border: 0px;
+	border-bottom: 3px solid black;
+	background: transparent;
+	width: 300px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 20px;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+.inputSign:focus{
+	outline: none;
+}
+.SigninBox #SignUp{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: 700;
+	width: 300px;
+	height: 50px;
+	border-radius: 20px;
+	border: 0px;
+	background-color: #d0cbc1d5;
+	margin-top: 20px;
+}
+.inputSign{
+	margin: 10px 0px 0px 0px;
+}
+.SigninBox .OptionSignUp{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 500;
+	color: #111111e1;
+}
+.SigninBox .OptionSignUp #Create{
+	cursor: pointer;
+}
+.SigninBox .OptionSignUp #Create:active{
+	color: blue;
+}
+
+/* User Information fill up Style */
+
+.SigninBox .UserForm{
+	display: none;
+	border-radius: 30px;
+	background: linear-gradient(215deg, #09e8a1, #6aff00);
+	position: absolute;
+	top: 90px;
+	left: 50%;
+	transform: translateX(-50%);
+	flex-direction: column;
+	width: 400px;
+	height: 500px;
+}
+.UserForm .profilePic {
+	width: 300px;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	margin: 20px 40px;
+}
+.SigninBox .UserForm #profiledis{
+	background-image: url('Images/NoProf.jpg');
+	border-radius: 100%;
+	background-position: center;
+	background-size: 100% 100%;
+	width: 120px;
+	height: 120px;
+}
+.UserForm #ProfPicButton label{
+	background: transparent;
+}
+.UserForm #ProfPicButton{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 900;
+	font-style: oblique;
+	font-size: 20px;
+	color: black;
+	border: 0px;
+	border-radius: 16px;
+	background-color: #e809e8;
+	padding: 12px;
+	transform: translateX(20px);
+}
+.UserForm #ProfileInput{
+	display: none;
+}
+.Infos{
+	display: flex;
+	flex-direction: column;
+	border-top: 3px solid black;
+	width: 400px;
+	height: 250px;
+	gap: 30px;
+	text-align: center;
+	justify-content: center;
+
+}
+.Infos .infoInputs{
+	outline: none;
+	border: none;
+	border-bottom: 3px solid black;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 17px;
+	width: 150px;
+	height: 20px;
+	background: transparent;
+	margin: 10px 10px;
+}
+#Proceed{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 900;
+	font-style: oblique;
+	font-size: 16px;
+	color: black;
+	border: 0px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-color: #606766cd;
+	height: 60px;
+	cursor: pointer;
+}
+
+/* details styles */
+
+.back{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 30px;
+	font-weight: 900;
+	border: 0px;
+	background: transparent;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	border-top-left-radius: 30px;
+}
+.back:hover{
+	background-color: #6b6e6e4f;
+	align-items: center;
+	text-align: center;
+	
+}
+
+.violation{
+	font-size: 10px;
+	color: red;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	width: 300px;
+	text-align: left;
+}
+
+@media (max-width: 500px){
+	.SigninBox{
+		padding: 0px;
+	}
+	.SigninBox .SignInForm{
+		width: 350px;
+		height: 350px;
+	}
+}

@@ -3,7 +3,9 @@
 	height: 100%;
 	display: flex;
 }
-
+.None{
+	display: none;
+}
 /* Styles for Left side bar of The Input Lists */
 
 .InputLists .left{

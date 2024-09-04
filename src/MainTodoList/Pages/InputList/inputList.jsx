@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import "./inputList.css"
 import Tasks from "./Tasks"
-export default function InputList(){
+export default function InputList({ pagination }){
 	const [taskLists, setTaskLists] = useState([])
 	const [currentAddedTask, setCurrentAddedTask] = useState() 
 	const [selected, setSelected] = useState(null)
@@ -98,7 +98,7 @@ export default function InputList(){
 	}, [taskLists])
 
 	return(
-		<div className="InputLists">
+		<div className={pagination == 0 ? "InputLists" : "InputLists None"}>
 			<div className="left">
 				<button id={stateOfTasks === 0 ? "onFocus" : " "} onClick={()=>handleStateTasks(0)}>Write Task</button>
 				<button id={stateOfTasks === 1 ? "onFocus" : " "} onClick={()=>handleStateTasks(1)}>All Task</button>
